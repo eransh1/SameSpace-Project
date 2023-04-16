@@ -21,7 +21,6 @@ const Player = () => {
     const dispatch=useDispatch()
     const isPlaying=useSelector((state)=>state.isAudioPlaying)
     let dummyTimer=0
-
 //HANDLE PREVIOUS
 const handlePrev=(id)=>{
 songsList.map((songs,idx)=>{

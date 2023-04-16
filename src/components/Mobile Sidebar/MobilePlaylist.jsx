@@ -9,6 +9,7 @@ import {setSongList} from "../../redux/SongListSlice"
 import { setSongId } from '../../redux/SongIdSlice';
 import { setAudioPlaying } from '../../redux/AudioPlayingSlice'
 import { setPlayingSong } from '../../redux/PlayingSong'
+import SongListSkeleton from '../Skeleton/Song List Skeleton/SongListSkeleton';
 
 const MobilePlaylist = () => {
     const dispatch=useDispatch()
@@ -18,7 +19,7 @@ const MobilePlaylist = () => {
     const { error, loading, data } = useQuery(LOAD_SONGS,{variables:{playlistId:Number(playListData.id)}});
     const songId=useSelector((state)=>state.songId)
     const playingSong=useSelector((state)=>state.playingSong)
-
+console.log("songList",songList)
     useEffect(() => {
         if (data) {
             dispatch(setSongList(data.getSongs));
@@ -57,6 +58,8 @@ const MobilePlaylist = () => {
   return (
     <>
         <div className={styles.songsListCont}>
+        {loading&&<SongListSkeleton cards={5}/>}
+
         {(searchSong.length>0?searchSong:songList).map((song)=>{
         return <>
 

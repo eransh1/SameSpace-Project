@@ -9,6 +9,7 @@ import {setSongList} from "../../redux/SongListSlice"
 import { setSongId } from '../../redux/SongIdSlice';
 import { setAudioPlaying } from '../../redux/AudioPlayingSlice'
 import { setPlayingSong } from '../../redux/PlayingSong'
+import SongListSkeleton from '../Skeleton/Song List Skeleton/SongListSkeleton';
 
 const Playlist = () => {
     const dispatch=useDispatch()
@@ -63,6 +64,7 @@ const Playlist = () => {
         <Searchbar/>
     </div>
     <div className={styles.playlistCont}>
+    {loading&&<SongListSkeleton cards={5}/>}
     {(searchSong.length>0?searchSong:songList).map((song)=>{
         return <>
 

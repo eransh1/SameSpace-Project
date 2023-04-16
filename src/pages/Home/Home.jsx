@@ -26,7 +26,10 @@ if(JSON.stringify(playingSong)==="{}"){setBgColor("black");return}
 const imgUrl = playingSong.photo;
  
 grad.gr(imgUrl).then(gradient =>{
+  if(gradient){
     setBgColor(gradient.relevant[0])
+  }
+    
 });
   },[playingSong])
  

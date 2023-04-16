@@ -1,34 +1,15 @@
-.outerCont{
-    width: 390px;
-    height: 99%;
-    padding: 1.5rem;
-    padding-bottom: 0;
-    /* background-color: red; */
-}
-.title{
-    font-family: 'Basier Circle';
-font-style: normal;
-font-weight: 700;
-font-size: 2rem;
-line-height: 36px;
-color: #FFFFFF;
-}
-.searchcont{
-    margin-top: 2rem;
+.songsListCont{
     width: 100%;
-}
-.playlistCont{
-    width: 100%;
-    height: 78%;
-    margin-top: 2rem;
+    height: 250px;
+    /* padding: 1rem; */
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    padding-right: .35rem;
 }
-.playlistCont::-webkit-scrollbar {
+.songsListCont::-webkit-scrollbar {
     display: none;
 }
+
 .songInfoCont{
     width: 91%;
     height: 80px;
@@ -39,7 +20,7 @@ color: #FFFFFF;
     margin-bottom:.5rem;
 }
 .activeSongInfoCont{
-    width: 91%;
+    width: 87%;
     height: 80px;
     padding: 1rem;
     display: flex;

@@ -7,6 +7,7 @@ import searchSongReducer from "./SearchedSongSlice"
 import songIdReducer from "./SongIdSlice"
 import audioPlayingReducer from "./AudioPlayingSlice"
 import seekerWidthReducer from "./SeekerWidthSlice"
+import burgerClickReducer from "./BurgerClickSlice"
 export const store = configureStore({
     reducer: {
       playList: playlistReducer,
@@ -16,7 +17,8 @@ export const store = configureStore({
       searchSong:searchSongReducer,
       songId:songIdReducer,
       isAudioPlaying:audioPlayingReducer,
-      seekerWidth:seekerWidthReducer
+      seekerWidth:seekerWidthReducer,
+      burgerClick:burgerClickReducer
       
     },
   });

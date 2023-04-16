@@ -12,6 +12,7 @@ import { setAudioPlaying } from '../../redux/AudioPlayingSlice'
 
 
 const Player = () => {
+    const isBurgerClick=useSelector((state)=>state.burgerClick)
     const [seekerWidth,setSekerWidth]=useState(0)
     const[isMute,setIsMute]=useState(false)
     const selectedSong=useSelector((state)=>state.song)
@@ -130,7 +131,8 @@ function updatePlayTime() {
     {JSON.stringify(playingSong)!=="{}"&&<audio onTimeUpdate={updatePlayTime()} className={styles.mainPlayer} id="myAudioPlayer_player_122122" controls>
   <source src={playingSong.url} type="audio/mpeg"/>
 </audio>}
-    <section className={styles.outerCont}>
+    <section style={{width:isBurgerClick?"":""}} className={styles.outerCont}>
+
         <h1 className={styles.songName}>{selectedSong.title}</h1>
         <p className={styles.songAuthor}>{selectedSong.artist}</p>
         {!playingSong?.photo&&<div className={styles.tempImage}>No Track Selected</div>}

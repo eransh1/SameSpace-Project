@@ -22,6 +22,7 @@ const MobileSidebar = ({width}) => {
       const dispatch=useDispatch()
       const idx=useSelector((state)=>state.playList)
     const isBurgerClick=useSelector((state)=>state.burgerClick)
+    const selectedPlayList=useSelector((state)=>state.playList)
       useEffect(() => {
         if (data) {
             setPlaylistt(data.getPlaylists);
@@ -29,7 +30,9 @@ const MobileSidebar = ({width}) => {
       }, [data]);
 
       const handleSelectPlayList=(item)=>{
+        if(selectedPlayList.id===item.id){dispatch(setPlayList({id:"",name:""}));return}
         dispatch(setPlayList({id:item.id,name:item.title}))
+        
       }
 
 

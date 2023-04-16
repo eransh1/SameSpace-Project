@@ -1,0 +1,152 @@
+.outerCont{
+    width: 54%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.songName{
+    text-transform: capitalize;
+    text-align: left;
+    width: 50%;
+    font-family: 'Basier Circle';
+font-style: normal;
+font-weight: 700;
+font-size: 1.8rem;
+line-height: 36px;
+color: #FFFFFF;
+}
+.songAuthor{
+    font-family: 'Basier Circle';
+font-style: normal;
+font-weight: 400;
+font-size: 1rem;
+line-height: 24px;
+color: #FFFFFF;
+opacity: 0.6;
+text-transform: capitalize;
+text-align: left;
+width: 50%;
+}
+.songImage{
+    height: 49%;
+    width: 49%;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+.tempImage{
+    height: 49%;
+    width: 49%;
+    margin-top: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2rem; 
+    background-color: #dadada;
+}
+
+.songSeeker{
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    margin-top: 1rem;
+    width: 49%;
+    position: relative;
+    cursor: pointer;
+}
+.seekBar{
+    background: #FFFFFF;
+border-radius: 16px;
+height: 6px;
+position: absolute;
+left: 0;
+width: 100px;
+}
+
+.controlerCont{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    width: 49%;
+}
+.optionCont{
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.threeDots{
+    color: white;
+    font-size: 1.2rem;
+}
+.player{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.playerCont{
+    width: 50%;
+    margin: auto;
+    margin: auto;
+    display: flex;
+}
+.prevSong{
+    cursor: pointer;
+    transform: rotate(180deg);
+    color: white;
+    opacity: 0.6;
+    font-size: 1.3rem;
+    margin: auto;
+}
+.playPauseIcon{
+    font-size: 1.9rem;
+}
+.playBtnCont{
+    width: 48px;
+height: 48px;
+background-color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+margin: auto;
+cursor: pointer;
+}
+.nextSong{
+    cursor: pointer;
+    color: white;
+    opacity: 0.6;
+    font-size: 1.3rem;
+    margin: auto;  
+}
+.audio{
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: auto; 
+    cursor: pointer;  
+}
+.audioIcon{
+    color: white;
+    font-size: 1.1rem;
+}
+
+.mainPlayer{
+    position: absolute;
+    visibility: hidden;
+}

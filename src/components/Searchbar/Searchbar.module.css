@@ -1,0 +1,26 @@
+.outerCont{
+    width:85%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+border-radius: 8px;
+border: none;
+padding-left: 1rem;
+color: white;
+padding-right: 3rem;
+}
+.outerCont:focus{
+    outline: none;
+}
+.inpCont{
+width: 100%;
+position: relative;
+}
+.searchIcon{
+    color: #FFFFFF;
+
+    opacity: 0.6;
+    font-size: 1.5rem;
+    position: absolute;
+    right: .25rem;
+    top: .75rem;
+}

@@ -92,14 +92,14 @@ useEffect(()=>{
 
 useEffect(()=>{
     if(JSON.stringify(playingSong)==="{}"){return}
-   console.log("yipee")
+  
     let timerId
     if(!isPlaying){clearInterval(timerId)}
     if(isPlaying){
         timerId= setInterval(()=>{
             if(document.querySelector("#myAudioPlayer_player_122122")){
             const playTime = Math.floor(document.querySelector("#myAudioPlayer_player_122122").currentTime);
-            console.log("playTime",playTime)
+    
             //COMMENTED ACTUAL CODE
             // setSekerWidth((playTime*100)/playingSong.duration)
             setSekerWidth((playTime*100)/217)
@@ -122,7 +122,6 @@ function updatePlayTime() {
     setSekerWidth(percentage)
     // document.querySelector("#myAudioPlayer_player_122122").currentTime =(playingSong.duration*percentage)/100
     document.querySelector("#myAudioPlayer_player_122122").currentTime =(217*percentage)/100
-    console.log(percentage)
    
   }
 

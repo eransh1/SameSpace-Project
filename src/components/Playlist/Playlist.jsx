@@ -18,7 +18,7 @@ const Playlist = () => {
     const { error, loading, data } = useQuery(LOAD_SONGS,{variables:{playlistId:Number(playListData.id)}});
     const songId=useSelector((state)=>state.songId)
     const playingSong=useSelector((state)=>state.playingSong)
-console.log("searchSong",searchSong)
+
 
 
     useEffect(() => {

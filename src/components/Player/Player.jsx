@@ -23,8 +23,10 @@ const Player = () => {
     let dummyTimer=0
 //HANDLE PREVIOUS
 const handlePrev=(id)=>{
+    // eslint-disable-next-line
 songsList.map((songs,idx)=>{
     if (songs._id===id){
+        // eslint-disable-next-line
         if(idx===0){return}
         dispatch(setAudioPlaying(false))
         setSekerWidth(0)
@@ -39,15 +41,17 @@ songsList.map((songs,idx)=>{
             },10)
            
         },10)
+        // eslint-disable-next-line
         return}
 })
 }
 
 //HANDLE NEXT SONG
 const handleNext=(id)=>{
+    // eslint-disable-next-line
     songsList.map((songs,idx)=>{
         if (songs._id===id){
-            
+            // eslint-disable-next-line
             if(idx===songsList.length){return}
             dispatch(setAudioPlaying(false))
             setSekerWidth(0)
@@ -62,6 +66,7 @@ const handleNext=(id)=>{
                 },10)
                
             },10)
+            // eslint-disable-next-line
             return}
     })
 }
@@ -73,6 +78,7 @@ if(!isPlaying){document.querySelector("#myAudioPlayer_player_122122").pause();re
 document.querySelector("#myAudioPlayer_player_122122").play()
 
     }
+    // eslint-disable-next-line
 },[isPlaying])
 
 //HANDLE MUTE OF MUSIC
@@ -81,6 +87,7 @@ useEffect(()=>{
         if(!isMute){document.querySelector("#myAudioPlayer_player_122122").muted=isMute;return}
         document.querySelector("#myAudioPlayer_player_122122").muted=isMute
             }
+            // eslint-disable-next-line
 },[isMute,isPlaying])
 
 //HANDLE PROGRESS BAR
@@ -107,6 +114,7 @@ useEffect(()=>{
         },1000)
  
     }
+    // eslint-disable-next-line
 },[dummyTimer,playingSong])
 
 function updatePlayTime() {

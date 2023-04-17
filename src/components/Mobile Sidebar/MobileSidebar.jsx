@@ -3,7 +3,7 @@ import styles from "./MobileSidebar.module.css"
 import logo from "../../images/Logo.svg"
 import profileImg from "../../images/Ansh Image.jpg"
 import {IoMdArrowDropdown} from "react-icons/io"
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { LOAD_PLAYLIST } from "../../GraphQL/Queries";
 import { useDispatch, useSelector } from 'react-redux';
 import { setPlayList } from '../../redux/PlaylistSlice';
@@ -11,12 +11,11 @@ import MobilePlaylist from './MobilePlaylist'
 import {GiHamburgerMenu} from "react-icons/gi"
 import { setBurgerClick } from '../../redux/BurgerClickSlice'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
-import { setSearchSong } from '../../redux/SearchedSongSlice'
-import { setSongList } from '../../redux/SongListSlice'
 import OptionSkeleton from '../Skeleton/Option Skeletion/OptionSkeleton'
 import Searchbar from '../Searchbar/Searchbar'
 
 const MobileSidebar = ({width}) => {
+  // eslint-disable-next-line
     const { error, loading, data } = useQuery(LOAD_PLAYLIST);
     const [playListt, setPlaylistt] = useState([]);
       const dispatch=useDispatch()

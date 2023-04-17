@@ -20,10 +20,11 @@ return
   }
 let timerId
 if(timerId){clearTimeout(timerId);return}
-timerId=setTimeout(()=>{
+ timerId=setTimeout(()=>{
   if(search){setIsSearching(true)}
   
 },1000)
+// eslint-disable-next-line
 },[search])
 
 
@@ -37,6 +38,7 @@ timerId=setTimeout(()=>{
     <input onChange={(e)=>setSearch(e.target.value)} type='text' placeholder='Search Song, Artist' className={styles.outerCont}/>
     <AiOutlineSearch className={styles.searchIcon}/>
     
+    {/* <div className={styles.noresultCont}>No Result Found</div> */}
     </div>
     </>
   )

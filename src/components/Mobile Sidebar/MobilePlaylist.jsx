@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from "./MobilePlaylist.module.css"
-import Searchbar from '../Searchbar/Searchbar'
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { LOAD_SONGS } from "../../GraphQL/Queries";
 import { useDispatch, useSelector } from 'react-redux';
 import { setSong } from '../../redux/SongSlice';
@@ -16,6 +15,7 @@ const MobilePlaylist = () => {
     const playListData=useSelector((state)=>state.playList)
     const songList=useSelector((state)=>state.songList)
     const searchSong=useSelector((state)=>state.searchSong)
+    // eslint-disable-next-line
     const { error, loading, data } = useQuery(LOAD_SONGS,{variables:{playlistId:Number(playListData.id)}});
     const songId=useSelector((state)=>state.songId)
     const playingSong=useSelector((state)=>state.playingSong)
@@ -24,6 +24,7 @@ console.log("songList",songList)
         if (data) {
             dispatch(setSongList(data.getSongs));
         }
+        // eslint-disable-next-line
       }, [data]);
 
       //GET DURATION

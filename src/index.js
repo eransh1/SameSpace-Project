@@ -17,6 +17,7 @@ import { Provider } from "react-redux";
 
 const errorLink = onError(({ graphqlErrors, networkError }) => {
   if (graphqlErrors) {
+    // eslint-disable-next-line
     graphqlErrors.map(({ message, location, path }) => {
       alert(`Graphql error ${message}`);
     });
